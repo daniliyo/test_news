@@ -12,9 +12,9 @@ class NewsController extends Controller
         if($request->input('by_category')){
             $all_news = News::where('category_id', $request->input('by_category'))
                 ->orderBy('updated_at', 'desc')
-                ->get();
+                ->simplePaginate(10);
         } else {
-            $all_news = News::orderBy('updated_at', 'desc')->get();
+            $all_news = News::orderBy('updated_at', 'desc')->simplePaginate(10);
         }
         $categories = Category::all();
         return view('news', compact('all_news', 'categories'));
