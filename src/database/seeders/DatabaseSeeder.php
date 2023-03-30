@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\News;
 
 class DatabaseSeeder extends Seeder
 {
@@ -15,5 +16,6 @@ class DatabaseSeeder extends Seeder
         $this->call([
             CategorySeeder::class,
         ]);
+        News::factory(25)->create();
     }
 }
