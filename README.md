@@ -9,6 +9,7 @@
 9. `cp .env.example .env`
 10. `php artisan key:generate`
 11. `chmod -R 777 storage`
+
 Use this data for connect to database. Put it in .env file (which located in src directore)
 `DB_CONNECTION=mysql`
 `DB_HOST=mysql`
@@ -16,6 +17,7 @@ Use this data for connect to database. Put it in .env file (which located in src
 `DB_DATABASE=news`
 `DB_USERNAME=admin`
 `DB_PASSWORD=123456`
+
 12. Continue to run next commands
 13. `php artisan migrate --seed`
 14. `npm install`
@@ -23,4 +25,5 @@ Use this data for connect to database. Put it in .env file (which located in src
 16. `npm run build`
 
 URL http://localhost:8000/
+
 Manager page - http://localhost:8000/manager
